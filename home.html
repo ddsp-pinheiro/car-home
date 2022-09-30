@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Casa</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="8vh" height="6vh" fill="currentColor"
+                class="bi bi-arrow-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+            </svg></a>
+        <div class="buttons">
+            <div class="line">
+                <button class="buttonStyle" type="button" id="btnAbrir"><img id="garagem-icon" src="/img/846316.png"
+                        alt=""><strong>Abrir/Fechar</strong></button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="modalAbrir" role="dialog" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title"><strong> Ação realizada com sucesso!</strong></h4>
+                            </div>
+                            <div class="modal-body">
+                                <div>
+                                    <h2 id="aberto" style="display:none">A garagem está aberta.</h2>
+                                    <h2 id="fechado" style="display:none">A garagem está fechada.</h2>
+
+                                    <div class="bgCicle" style="display:none" id="garagem">
+                                        <img class="imgGaragem" src="/img/846316.png" alt="">
+                                    </div>
+                                    <div class="bgCicle" style="display:none" id="garagemAberta">
+                                        <img class="imgGaragem" src="/img/garagem aberta.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="btns">
+                                    <button class="buttonDecision" id="abrindo">
+                                        <strong>Abrir</strong>
+                                    </button>
+                                    <button class="buttonDecision" id="fechando">
+                                        <strong>Fechar</strong>
+                                    </button>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <button class="buttonStyle" id="btnAcender">
+                    <img id="lampada-icon" src="/img/lampada.png" alt=""><strong>Acender/Apagar</strong>
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="modalAcender" role="dialog" tabindex="-1"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title"><strong> Ação realizada com sucesso!</strong></h4>
+                            </div>
+                            <div class="modal-body">
+                                <div>
+                                    <h2 id="aceso" style="display:none">A lampada está acesa.</h2>
+                                    <h2 id="apagado" style="display:none">A lampada está apagada.</h2>
+
+                                    <div class="bgCicle" style="display:none" id="lampadaAcesa">
+                                        <img class="imgGaragem" src="/img/lampada acesa.png" alt="">
+                                    </div>
+                                    <div class="bgCicle" style="display:none" id="lampadaApagada">
+                                        <img class="imgGaragem" src="/img/lampada apagada.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="btns">
+                                    <button class="buttonDecision" id="acender">
+                                        <strong>Acender</strong>
+                                    </button>
+                                    <button class="buttonDecision" id="apagar">
+                                        <strong>Apagar</strong>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="line">
+                <button class="buttonStyle" id="btnAcessar">
+                    <img id="camera-icon" src="/img/2060364.png" alt=""><strong>Acessar câmeras</strong>
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="modalAcessar" role="dialog" tabindex="-1"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title"><strong> Imagem das cameras</strong></h4>
+                            </div>
+                            <div class="modal-body">
+                                <iframe id="img-lg" src="https://thumbs.gfycat.com/DemandingFinishedCardinal-mobile.mp4"
+                                    alt="">
+
+                                </iframe>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <button class="buttonStyle" id="btnAr">
+                    <img id="ar-icon" src="/img/ar.png" alt=""><strong>Ar condicionado</strong>
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="modalAr" role="dialog" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title"><strong> Ação realizada com sucesso!</strong></h4>
+                            </div>
+                            <div class="modal-body">
+                                <div>
+                                    <h2 id="ligaAr" style="display:none">O Ar condicionado está ligado.</h2>
+                                    <h2 id="desligaAr" style="display:none">O Ar condicionado está desligado.</h2>
+
+                                    <div class="bgCicle" style="display:none" id="arLigado">
+                                        <img class="imgGaragem" src="/img/ar.png" alt="">
+                                    </div>
+                                    <div class="bgCicle" style="display:none" id="arDesligado">
+                                        <img class="imgGaragem" src="/img/ar deligado.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="btns">
+                                    <button class="buttonDecision" id="ligado">
+                                        <strong>Ligar</strong>
+                                    </button>
+                                    <button class="buttonDecision" id="desligado">
+                                        <strong>Desligar</strong>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <button class="buttonStyle" type="button" id="btnAlarme">
+                <img id="sino-icon" src="/img/sino.png" alt=""><strong>Alarme</strong>
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="modalAlarme" role="dialog" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title"><strong> Ação realizada com sucesso!</strong></h4>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <h2 id="ligaAlarme" style="display:none">O alarme foi acionado!</h2>
+                                <h2 id="desligaAlarme" style="display:none">O alarme foi desligado.</h2>
+
+                                <div class="bgCicle" style="display:none" id="alarmeLigado">
+                                    <img class="imgGaragem" src="/img/sino.png" alt="">
+                                </div>
+                                <div class="bgCicle" style="display:none" id="alarmeDesligado">
+                                    <img class="imgGaragem" src="/img/alarme deligado.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="btns">
+                                <button class="buttonDecision" id="ativo">
+                                    <strong>Acionar</strong>
+                                </button>
+                                <button class="buttonDecision" id="desativado">
+                                    <strong>Deligar</strong>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+            $(document).ready(function () {
+                $("#btnAbrir").click(function () {
+                    $("#modalAbrir").modal();
+                });
+            });
+        </script>
+
+        <script>
+            $(document).ready(function () {
+                $("#abrindo").click(function () {
+                    $("#aberto").show()
+                    $("#garagem").hide()
+                    $("#garagemAberta").show()
+                    $("#fechado").hide()
+                })
+            });
+        </script>
+        <script>
+            $(document).ready(function () {
+                $("#fechando").click(function () {
+                    $("#fechado").show()
+                    $("#garagem").show()
+                    $("#garagemAberta").hide()
+                    $("#aberto").hide()
+                })
+            });
+        </script>
+
+        <script>
+            $(document).ready(function () {
+                $("#btnAcender").click(function () {
+                    $("#modalAcender").modal();
+                });
+            });
+        </script>
+
+        <script>
+            $(document).ready(function () {
+                $("#acender").click(function () {
+                    $("#aceso").show()
+                    $("#lampadaApagada").hide()
+                    $("#lampadaAcesa").show()
+                    $("#apagado").hide()
+                })
+            });
+        </script>
+        <script>
+            $(document).ready(function () {
+                $("#apagar").click(function () {
+                    $("#apagado").show()
+                    $("#lampadaApagada").show()
+                    $("#lampadaAcesa").hide()
+                    $("#aceso").hide()
+                })
+            });
+        </script>
+
+        <script>
+            $(document).ready(function () {
+                $("#btnAcessar").click(function () {
+                    $("#modalAcessar").modal();
+                });
+            });
+        </script>
+
+        <script>
+            $(document).ready(function () {
+                $("#btnAr").click(function () {
+                    $("#modalAr").modal();
+                });
+            });
+        </script>
+        <script>
+            $(document).ready(function () {
+                $("#ligado").click(function () {
+                    $("#ligaAr").show()
+                    $("#arDesligado").hide()
+                    $("#arLigado").show()
+                    $("#desligaAr").hide()
+                })
+            });
+        </script>
+        <script>
+            $(document).ready(function () {
+                $("#desligado").click(function () {
+                    $("#desligaAr").show()
+                    $("#arDesligado").show()
+                    $("#arLigado").hide()
+                    $("#ligaAr").hide()
+                })
+            });
+        </script>
+
+        <script>
+            $(document).ready(function () {
+                $("#btnAlarme").click(function () {
+                    $("#modalAlarme").modal();
+                });
+            });
+        </script>
+        <script>
+            $(document).ready(function () {
+                $("#ativo").click(function () {
+                    $("#ligaAlarme").show()
+                    $("#alarmeDesligado").hide()
+                    $("#alarmeLigado").show()
+                    $("#desligaAlarme").hide()
+                })
+            });
+        </script>
+        <script>
+            $(document).ready(function () {
+                $("#desativado").click(function () {
+                    $("#desligaAlarme").show()
+                    $("#alarmeDesligado").show()
+                    $("#alarmeLigado").hide()
+                    $("#ligaAlarme").hide()
+                })
+            });
+        </script>
+
+
+</body>
+
+</html>

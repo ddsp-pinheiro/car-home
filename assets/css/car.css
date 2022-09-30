@@ -1,0 +1,111 @@
+body{
+   
+    background-color: rgb(3, 0, 12);
+    display: flex;
+    justify-items: center;
+}
+
+a{
+    color: white;
+}
+.bi-arrow-left{
+    margin: 10px;
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-around;
+}
+h5{
+    text-align: left;
+}
+#apps-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#gps-icon{
+    height: 6vh;
+    margin: 3vh;
+}
+#apps-icon{
+    height: 7vh;
+    margin: 3vh;
+}
+#status-icon{
+    height: 6.5vh;
+    margin: 3vh;
+}
+#info-icon{
+    height: 6.5vh;
+    margin: 3vh;
+}
+.buttonStyle{
+    color: white;
+    background-color:rgb(25, 171, 253);
+    margin: 3vh;
+    width: 20vh;
+    height: 20vh;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.line{
+    display: flex;
+    flex-direction: row
+}
+#elements{
+    display: flex;
+    flex-direction: row;
+}
+#car{
+    height: 35vh;
+    margin: 3vh;
+}
+.itens-car{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.subtitle-car{
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+p{
+    margin: 1vh;
+}
+iframe{
+    margin: 3vh;
+}
+.bgCicle{
+    margin: 10vh;
+    border-radius: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    width: 30vh;
+    background-color:rgb(253, 107, 25);
+}
+.imgGaragem{
+    height: 20vh;
+}
+.btns{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.buttonDecision{
+    height: 8vh;
+    width: 20vh;
+    margin: 2vh;
+    border-radius: 1rem;
+    background-color: rgb(25, 171, 253);
+    color: white;
+    border: 0ch;
+}
